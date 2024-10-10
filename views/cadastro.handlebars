@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css" >
+    <link rel="icon" type="image/x-icon" href="../images/logos/YM - Logo png.png">
+    <title>YourModus</title>
+    <script>
+        function mostrarsenha() {
+            var x = document.getElementById("senha");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+            var y = document.getElementById("senha2");
+            if (y.type === "password") {
+                y.type = "text";
+            } else {
+                y.type = "password";
+            }
+            }
+    </script>
+</head>
+<body>
+    <div class="content">
+    <div class="formulario">
+        <h1>Cadastro</h1>
+        <form action="/cadastro/user" method="POST">
+        <input class="inputform" type="text" placeholder="Username" name="nome_usuario" value="{{nome_usuario}}">
+        <br><br>
+        <input class="inputform" type="email" placeholder="Email" name="email_usuario" value="{{email_usuario}}">
+        <br><br>
+        <input class="inputform" type="password" id="senha" placeholder="Senha" name="senha_usuario" value="{{senha_usuario}}">
+        <br><br>
+        <input class="inputform" type="password" id="senha2" placeholder="Confirme a senha" name="confirme_senha" value="{{confirme_senha}}">
+        <br><br>
+        <input id="mostra"type="checkbox" onclick="mostrarsenha()">Mostrar Senha</input>
+        <br><br>
+        <button>Cadastrar</button>
+        </form>
+        <br>
+        Já tem uma conta? <a href="/login">Faça seu login</a>
+        <p class="mensagem">{{mensagem}}</p>
+        <style>{{mensagem2}}</style>
+    </div>
+    <div>
+        <img id="logo" src="../images/logos/YM - Logo completa png.png">
+    </div>
+    </div>
+</body>
+</html>

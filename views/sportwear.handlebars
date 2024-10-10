@@ -1,0 +1,67 @@
+<h1 class="header">Sportwear</h1>
+<h2 class="header">O estilo esportivo (ou sportwear) se baseia no uso de roupas esportivas para o dia a dia, como leggings e tênis. Esse estilo é muito confortável, e vai bem nos momentos mais casuais até os mais formais.
+<figcaption><a style="font-size:medium"class="fonte" href="https://blog.calcadonet.com.br/moda/estilos-de-roupa/">Fonte: Blog Calçado Net</a></figcaption></h2>
+<div class="row">
+  <div class="column">
+    {{#each colunaA}}
+      <button id="{{nome_imagem}}"><img src="../images/spw/a/{{nome_imagem}}.jpeg" style="width:100%"></button>
+    {{/each}}
+  </div>
+  <div class="column">
+    {{#each colunaB}}
+    <button id="{{nome_imagem}}"><img src="../images/spw/b/{{nome_imagem}}.jpeg" style="width:100%"></button>
+    {{/each}}
+  </div>
+  <div class="column">
+    {{#each colunaC}}
+    <button id="{{nome_imagem}}"><img src="../images/spw/c/{{nome_imagem}}.jpeg" style="width:100%"></button>
+    {{/each}}
+  </div>
+  <div class="column">
+    {{#each colunaD}}
+    <button id="{{nome_imagem}}"><img src="../images/spw/d/{{nome_imagem}}.jpeg" style="width:100%"></button>
+    {{/each}}
+  </div>
+</div>
+{{#each imagens}}
+<div id="myModal{{id_imagem}}" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="spanclose"class="close{{id_imagem}}">x</span>
+    <div class="modalimgtxt">
+    <img id="imgmodal" src="../images/spw/{{coluna_imagem}}/{{nome_imagem}}.jpeg" style="width= 100%">
+    <div class="modaltxt">
+    <h1 id="a">{{estilo_imagem}}</h1>
+    <p style="font-size: 20px;">{{descricao_imagem}}</p>
+    </div>
+    </div>
+    <footer id="fonte"><a href="{{link_imagem}}">Reprodução: {{autor_imagem}}</a></footer>
+  </div>
+</div> 
+<script>
+// Puxa o modal
+const modal{{id_imagem}} = document.getElementById('myModal{{id_imagem}}');
+// Puxa o botão para abrir o modal
+const btn{{id_imagem}} = document.getElementById('{{nome_imagem}}');
+
+// Puxa o span para fechar o modal
+const span{{id_imagem}} = document.getElementsByClassName('close{{id_imagem}}')[0];
+
+// Abre o modal quando clica na imagem/botâo
+btn{{id_imagem}}.onclick = function() {
+  modal{{id_imagem}}.style.display = "block";
+}
+
+// Fecha o modal quando clicar no (X)
+span{{id_imagem}}.onclick = function() {
+  modal{{id_imagem}}.style.display = "none";
+}
+
+// Fecha quando clicar fora do modal
+window.onclick = function(event) {
+  if (event.target == modal{{id_imagem}}) {
+    modal{{id_imagem}}.style.display = "none";
+  }
+}
+</script>
+{{/each}}

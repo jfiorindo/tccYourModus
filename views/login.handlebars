@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" type="image/x-icon" href="../images/logos/YM - Logo png.png">
+    <title>YourModus</title>
+    <script>
+        function mostrarsenha() {
+            var x = document.getElementById("senha");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="formulario">
+        <h1>Login</h1>
+        <form action="login/user" method="post">
+        <input type="text" name="nome_usuario" placeholder="Username">
+        <br><br>
+        <input type="password" id="senha" name="senha_usuario" placeholder="Senha">
+        <br><br>
+        <input id="mostra"type="checkbox" onclick="mostrarsenha()">Mostrar Senha</input>
+        <br><br>
+        <button>Entrar</button>
+        </form>
+        <br>
+        Não tem uma conta? <a href="/cadastro">Faça seu cadastro</a>
+        <p class="mensagem">{{mensagem}}</p>
+        <style>{{mensagem2}}</style>
+    </div>
+
+    <div>
+        <img id="logo" src="../images/logos/YM - Logo completa png.png">
+    </div>
+</body>
+</html>

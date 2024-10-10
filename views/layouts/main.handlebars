@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../images/logos/YM - Logo png.png">
+    <title>YourModus</title>
+    <style>
+        .EC{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav style="">
+        <a class="logo" style="background-color: lightpink;"href="/"><img src="../images/logos/YM - Logo e texto png.png"></a>
+        <a style="{{home}}" href="/">Home</a>
+        <a style="{{blog}}" href="/blog">Blog</a>
+        <div class="subnav">
+            <button style="{{sw}}{{stw}}" class="subnavbutton">Estilos</label>
+                <div class="subnavcontent">
+                <a style="{{cas}}" href="/casual">Casual</a>
+                <a style="{{cla}}" href="/classico">Clássico</a>
+                <a style="{{sw}}" href="/streetwear">Streetwear</a>
+                <a style="{{spw}}" href="/sportwear">Sportwear</a>
+                <a style="{{vr}}" href="/vintage&retro">Vintage/Retro</a>
+                <a style="{{gr}}" href="/grunge">Grunge</a>
+                <a style="{{cf}}" href="/comfy">Comfy</a>
+                <a style="{{hip}}" href="/hipster">Hipster</a>
+                <a style="{{ind}}" href="/indie">Indie</a>
+                <a style="{{min}}" href="/minimalista">Minimalista</a>
+            </div>
+        </div>
+        <a style="{{flex}}float: right;" class="EC"href="/login">Entrar</a>
+        <a style="{{flex}}float: right;" class="EC"href="/cadastro">Cadastrar-se</a>
+        <a style="{{configuracoes}}{{none}}" class="icone" href="/configuracoes"> {{user}} <img src="../images/icones/engrenagem.png"></a>
+    </nav>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        Todos os direitos reservados © 2022 YourModus 
+    </footer>
+</body>
+</html>

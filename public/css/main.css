@@ -1,0 +1,511 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+  padding-top: 100px;
+	background-color: rgb(255, 239, 241);
+  color: rgb(80, 40, 40);
+}
+/*Navigation Bar*/
+nav {
+  overflow: hidden;
+  background-color: lightpink; 
+  top: 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+}
+nav a, nav p {
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.5s;
+  color: rgb(80, 40, 40)
+}
+/*Subnavigation Bar*/
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+.subnav .subnavbutton {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  padding: 15px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 10px;
+  border-radius: 30px;
+  transition: 0.5s;
+  color: rgb(80, 40, 40)
+}
+nav a:hover, .subnav:hover .subnavbutton {
+  background-color: lightcoral;
+  transition: 0.5s;
+}
+nav a:active, .subnav:active {
+  background-color: lightpink;
+}
+.subnavcontent {
+  display: none;
+  position: fixed;
+  left: 0;
+  background-color: lightpink;
+  width: 100%;
+  z-index: 1;
+  margin-top: 20px;
+}
+.subnavcontent a {
+  float: left;
+  text-decoration: none;
+} 
+.subnavcontent a:hover {
+  background-color: lightcoral;
+}
+.subnavcontent a:active {
+  background-color: lightpink;
+}
+.subnav:hover .subnavcontent {
+	display: block;
+}
+/*Subnavigation Bar*/
+.logo{
+  margin:0;
+  background-color: lightpink;
+}
+.logo img{
+  height: 40px;
+  padding: 0;
+}
+.button{
+  background-color: lightpink;
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+}
+.button:hover{
+  background-color: lightcoral;
+}
+.button:active{
+  background-color: lightpink;
+}
+.icone img{
+  height: 25px;
+  vertical-align:middle;
+}
+.icone{
+  float: right;
+  font-size: 20px;
+  padding: 15px;
+  margin: 10px;
+}
+/*Navigation Bar*/
+/*Footer*/
+footer{
+  overflow: hidden;
+  background-color: lightpink; 
+  bottom: 0;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+  display: block;
+}
+/*Footer*/
+/*Scrollbar*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: lightpink;
+}
+::-webkit-scrollbar-thumb{
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.conteudo {
+	text-align: center;
+}
+.logo {
+	margin: 0;
+	font-size: 25px;
+}
+.logo a:hover{
+	color: gray;
+}
+.imgestilo{
+	width: 20%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.estilo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+}
+/*Home*/
+.imginicial{
+  width: 97.5%;
+  margin-top: 0px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+figcaption{
+  text-align: center;
+}
+.fonte{
+  color: gray;
+  transition: 0.5s;
+}
+.fonte:hover{
+  color: rgb(80, 40, 40);
+  transition: 0.5s;
+}
+.oquetem{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+.oquetemtxt{
+  width: 50%;
+  margin: 25px;
+}
+.oquetemtxt h1{
+  padding: 25px;
+}
+.oquetemtxt p{
+  padding: 25px;
+  font-size: 20px;;
+  text-align: justify;
+}
+.oquetemimg {
+  width: 40%;
+  margin: 25px;
+}
+.oquetemimg img{
+  width: 100%;
+  border-radius: 30px;
+}
+.oquetema{
+  background-color: rgb(255, 239, 241);
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.5s;
+}
+.oquetema:hover{
+  background-color: lightcoral;
+  transition: 0.5s;
+}
+/*Home*/
+/*Blog*/
+.box{
+  min-height: 400px;
+  width: 35%;
+  background-color: lightcoral;
+  border-radius: 30px;
+  display: inline-block;
+  margin-left: 10%;
+  margin-bottom: 50px;
+  padding: 50px;
+  text-align: center;
+  vertical-align: top;
+}
+.autor {
+  text-align: right;
+}
+.btnexcluir {
+  background-color: rgb(255, 239, 241);;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btnexcluir:hover{
+  background-color: lightpink;
+  transition: 0.5s;
+}
+.blogform{
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 30px;
+  padding: 25px;
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+.blogform input{
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  height: 15px;
+  width: 100%;
+}
+.blogform textarea{
+  padding: 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.blogform a,.blogform button{
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  padding: 20px;
+  width: 20%;
+  border-radius: 30px;
+  font-size: 20px;  
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.blogform a:hover, .blogform button:hover{
+  background-color: lightpink;
+  transition: 0.5s;
+}
+.mensagem {
+  border-radius: 10px;
+  background-color: lightcoral;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 40px 20px 40px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+/*Blog*/
+/*Configurações*/
+.configuracoes{
+  background-color: rgb(0,0,0, 0.9);
+  color: lightcoral;
+  border-radius: 30px;
+  padding: 50px;
+  width: 80%;
+  margin: 5% 10% 10% 10%;
+  font-size: 15px;
+}
+.configuracoes input{
+  padding: 20px 40px 20px 40px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  height: 15px;
+  width: 100%;
+}
+.configuracoes button,.configuracoes a{
+  background-color: lightcoral;
+  border: none;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  margin: 5px;
+  cursor: pointer;
+  width: 18.5%;
+  transition: 0.5s;
+  text-align: center;
+}
+.configuracoes button:hover,.configuracoes a:hover{
+  background-color: lightpink;
+  transition: 0.5s;
+}
+table{
+  width: 80%; 
+  margin: 10%;
+  background-color: lightpink;
+  padding: 10px;
+  border-radius: 30px;
+}
+td, th {
+  text-align: left;
+  border-radius: 30px;
+  padding: 10px;
+}
+td {
+  background-color: lightcoral;
+}
+#excluir{
+  text-align: center;
+  padding: 0;
+  background-color: rgb(255, 239, 241);
+  transition: 0.5s;
+}
+#excluir a{
+  color: rgb(80, 40, 40);
+  width: 100%;
+  padding: 5%;
+  margin: 0;
+}
+#excluir:hover{
+  background-color: lightcoral;
+  transition: 0.5s;
+}
+
+/*Configurações*/
+/*estilos*/
+* {
+  box-sizing: border-box;
+  }
+  
+.header {
+  margin-top: 0px;
+  text-align: center;
+  padding: 25px;
+  background-color: lightcoral;
+  }
+  
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 4px;
+  }
+  
+.column img {
+  vertical-align: middle;
+  width: 100%;
+  margin: 4px;
+  border-radius: 3%;
+  cursor: pointer;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.column button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 239, 241);
+}
+/* Modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content{
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 1000px;
+  min-height: 450px;
+  border-radius: 15px;
+}
+.modalimgtxt{
+  display: flex;
+}
+.modaltxt{
+  padding-left: 50px;
+  font-size: 30px;
+  height: 350px;
+  vertical-align: bottom;
+  text-align: center;
+}
+.modal-content img{
+  border-radius: 30px;
+  height: 400px;
+  width: auto;
+}
+
+.modal-content p{
+  text-align: center;
+  margin: 10%;
+}
+
+#a {
+  text-align: center;
+}
+#fonte {
+  background-color: inherit;
+  font-size: 15px;
+  border: 5px;
+  border-radius: 30px;
+  padding: 5px;
+  float: right;
+}
+
+#fonte a{
+  color: gray
+}
+#fonte a:hover{
+  color: rgb(80, 40, 40);
+}
+/* Botão para fechar */
+#spanclose {
+  position:relative;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#spanclose:hover,
+#spanclose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Botão para fechar */
+/*estilos*/

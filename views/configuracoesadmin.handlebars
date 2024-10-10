@@ -1,0 +1,57 @@
+<script>
+        function mostrarsenha() {
+            var x = document.getElementById("senha");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+</script>
+<h1 style="text-align: center;">Configurações de Perfil</h1>
+<div class="configuracoes">
+{{#each usuario}}
+<form action="/configuracoes/alterar" method="post">
+<h1 style="color: lightcoral;">Altere seu perfil</h1>
+<h2>Mude seu usuario, email e senha. (admin não pode ser alterado)</h2>
+<input type="hidden" name="id_usuario" value="{{id_usuario}}">
+<label for="username">Usuário</label>
+<input  type="text" id="username" name="nome_usuario" value="{{nome_usuario}}">
+<br><br>
+<label for="email">E-Mail</label>
+<input  type="email" id="email" name="email_usuario" value="{{email_usuario}}">
+<br><br>
+<label for="senha">Senha</label>
+<input type="password" id="senha" name="senha_usuario" value="{{senha_usuario}}">
+<br><br>
+<label for="mostra">Mostrar senha</label>
+<input style="width:auto"id="mostra"type="checkbox" onclick="mostrarsenha()">
+<br><br>
+<button >Alterar</button>
+<a href="/logout" onclick="return confirm('Deseja realmente sair?');">Sair da conta</a>
+<a href="/configuracoes/excluir" onclick="return confirm('Deseja realmente excluir sua conta?');">Excluir a conta</a>
+<a href="/login">Entrar em uma conta</a>
+<a href="/cadastro">Criar uma conta</a>
+</form>
+{{/each}}
+<p class="mensagem">{{mensagemconfig}}</p>
+<style>{{mensagem2}}</style>
+</div>
+<table>
+    <tr>
+        <th colspan="4"><h1 style="text-align: center">Lista dos usuarios de YourModus</h1></th>
+    </tr>
+    <tr>
+        <th style="text-align: center">Id</th>
+        <th style="text-align: center">Usuario</th>
+        <th style="text-align: center">Email</th>
+    </tr>
+    {{#each usuarios}}
+    <tr>
+      <td>{{id_usuario}}</td>
+      <td>{{nome_usuario}}</td>
+      <td>{{email_usuario}}</td>
+      <td id="excluir"><a href="/usuarios/excluir/{{id_usuario}}" onclick="return confirm('Excluir esse usuário?');">Excluir</a></td>
+    </tr>
+    {{/each}}
+</table>
